@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+/.idea
+/.vscode
+
+# history
+/.history
+
+# Sentry Config File
+.sentryclirc
