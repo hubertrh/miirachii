@@ -20,16 +20,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        accent: {
-          primary: {
-            // DEFAULT: "#397B7E",
-            // dark: "#30696B",
-          },
-          secondary: {
-            // DEFAULT: "#D19130",
-            // dark: "#BA7F27",
-          },
-        },
+        primary: "#806B59",
+        secondary: "#CBB9AC",
+        accent: "#3A3E64",
+        background: "#EDE9E6",
+        offwhite: "F3F2F1",
+        coal: "#191919",
       },
       height: {
         dvh: "100dvh",
