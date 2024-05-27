@@ -30,6 +30,7 @@ const config: Config = {
             // dark: "#BA7F27",
           },
         },
+        background: "#EDE9E6",
       },
       height: {
         dvh: "100dvh",
