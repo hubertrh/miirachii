@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NextTopLoader
+          color="#3A3E64"
+          height={5}
+          initialPosition={0.2}
+          easing="ease"
+          speed={500}
+        />
+        {children}
+        </body>
       <Analytics />
       <SpeedInsights />
     </html>
