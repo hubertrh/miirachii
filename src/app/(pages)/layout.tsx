@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <body
       className={`${quicksand.className} ${lora.variable} ${cn(
-        "bg-background min-h-screen font-sans antialiased",
+        "min-h-screen bg-background font-sans antialiased",
         fontSans.variable,
       )}`}
     >
