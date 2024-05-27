@@ -13,7 +13,7 @@ export default defineType({
     }),
     defineField({
       name: "logos",
-      title: "Logos",
+      title: "Logos (Transparent)",
       type: "object",
       fields: [
         defineField({
@@ -56,4 +56,9 @@ export default defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      title: "Contact and Brand information",
+    },
+  },
 });
