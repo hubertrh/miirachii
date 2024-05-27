@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
+import { cn } from "@/lib/utils";
 
 const lora = Lora({
   weight: ["400", "500", "600", "700"],
@@ -16,12 +17,12 @@ const quicksand = Quicksand({
   display: "swap",
   variable: "--font-quicksand",
 });
-// const fontSans = Quicksand({
-//   weight: ["300", "400", "500", "600", "700"],
-//   subsets: ["latin"],
-//   display: "swap",
-//   variable: "--font-sans",
-// });
+const fontSans = Quicksand({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Miirachii",
@@ -36,7 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} ${lora.variable}`}>
+      <body
+        className={`${quicksand.className} ${lora.variable} ${cn(
+          "bg-background min-h-screen font-sans antialiased",
+          fontSans.variable,
+        )}`}
+      >
         <NextTopLoader
           color="#3A3E64"
           height={5}
