@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import NextTopLoader from "nextjs-toploader";
 import { Lora, Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Header from "@/components/header/Header";
 
 export const metadata: Metadata = {
   title: "Miirachii",
@@ -48,6 +49,7 @@ export default function RootLayout({
         easing="ease"
         speed={500}
       />
+      <Header />
       <main className="min-h-screen">{children}</main>
       <Analytics />
       <SpeedInsights />
