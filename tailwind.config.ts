@@ -24,8 +24,8 @@ const config: Config = {
         secondary: "#CBB9AC",
         accent: "#3A3E64",
         background: "#EDE9E6",
-        white: "F3F2F1",
-        black: "#191919",
+        offwhite: "F3F2F1",
+        coal: "#191919",
       },
       height: {
         dvh: "100dvh",
