@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Quicksand } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-lora",
+});
+const quicksand = Quicksand({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-quicksand",
+});
+// const fontSans = Quicksand({
+//   weight: ["300", "400", "500", "600", "700"],
+//   subsets: ["latin"],
+//   display: "swap",
+//   variable: "--font-sans",
+// });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${quicksand.className} ${lora.variable}`}>
         <NextTopLoader
           color="#3A3E64"
           height={5}
