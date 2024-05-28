@@ -1,8 +1,10 @@
 import Image from "next/image";
 import heroBackground from "/public/hero-bg.jpg";
-import logoFull from "/public/logo-full.png";
+import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 
-export default function Hero() {
+export default async function Hero() {
+  const brandInfo = await getBrandInfo();
+
   return (
     <section className="relative grid h-svh w-full place-items-center">
       <Image
@@ -17,8 +19,10 @@ export default function Hero() {
       <div className="z-10 flex flex-col items-center gap-8">
         <div className="relative size-64">
           <Image
-            src={logoFull}
+            src={brandInfo.logos.logoFull.url}
             alt="Miirachii Logo"
+            placeholder="blur"
+            blurDataURL={brandInfo.logos.logoFull.metadata.lqip}
             fill
             style={{
               objectFit: "contain",
