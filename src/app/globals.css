@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  /* * {
-    @apply selection:bg-accent-secondary selection:text-white;
-  } */
+  * {
+    @apply selection:bg-accent selection:text-white;
+  }
 
   /* body {
     @apply bg-background text-gray-dark;
