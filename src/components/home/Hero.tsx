@@ -30,7 +30,9 @@ export default async function Hero() {
           />
         </div>
         <div className="h-0.5 w-16 bg-primary" />
-        <h1 className="text-6xl text-primary">Your Story, Beautifully Told</h1>
+        <h1 className="select-none text-6xl text-primary">
+          Your Story, Beautifully Told
+        </h1>
       </div>
     </section>
   );
