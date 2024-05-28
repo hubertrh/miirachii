@@ -25,7 +25,7 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className="h-0.5 w-20 bg-primary" />
+        <div className="h-0.5 w-16 bg-primary" />
         <h1 className="text-6xl text-primary">Your Story, Beautifully Told</h1>
       </div>
     </section>
