@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Nav from "./Nav";
-import LogoMinimal from "/public/logo-minimal.png";
+import logoMinimal from "/public/logo-minimal.png";
 
 export default function Header() {
   return (
@@ -8,7 +8,7 @@ export default function Header() {
       {/* TODO: opacity-100 on scroll down */}
       <Image
         className="opacity-0"
-        src={LogoMinimal}
+        src={logoMinimal}
         alt="Miirachii Logo"
         width={128}
         height={128}
