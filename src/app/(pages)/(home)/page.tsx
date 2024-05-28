@@ -1,3 +1,4 @@
+import About from "@/components/home/About";
 import Hero from "@/components/home/Hero";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <>
       <Hero />
       {/* FIXME: replace with actual content */}
+      <About />
       <div className="h-[200vh]" />
     </>
   );
