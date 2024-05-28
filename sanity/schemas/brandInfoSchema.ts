@@ -3,7 +3,7 @@ import { defineField, defineType } from "sanity";
 export default defineType({
   name: "contactInfo",
   type: "document",
-  title: "Contact Info",
+  title: "Brand Info",
   fields: [
     defineField({
       name: "brandName",
@@ -58,7 +58,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: "Contact and Brand information",
+      title: "Brand and Contact information",
     },
   },
 });

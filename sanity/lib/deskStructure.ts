@@ -2,10 +2,10 @@ import { StructureBuilder } from "sanity/structure";
 
 const singletonDocuments = {
   contactInfo: {
-    title: "Contact Info",
+    title: "Brand Info",
     documentId: "e084abdf-e7a9-448c-a0df-973941522014",
     schemaType: "contactInfo",
-    description: "Contact and Brand information",
+    description: "Brand and Contact Information",
   },
 };
 

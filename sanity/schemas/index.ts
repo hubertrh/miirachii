@@ -1,8 +1,8 @@
 import { SchemaTypeDefinition } from "sanity";
-import contactInfoSchema from "./contactInfoSchema";
+import brandInfoSchema from "./brandInfoSchema";
 
 const schemas: { types: SchemaTypeDefinition[] } = {
-  types: [contactInfoSchema],
+  types: [brandInfoSchema],
 };
 
 export default schemas;
