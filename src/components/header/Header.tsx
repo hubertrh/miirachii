@@ -4,7 +4,7 @@ import LogoMinimal from "/public/logo-minimal.png";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 grid w-full grid-cols-3 px-6">
+    <header className="fixed top-0 z-10 grid w-full grid-cols-3 px-6">
       {/* TODO: opacity-100 on scroll down */}
       <Image
         className="opacity-0"
