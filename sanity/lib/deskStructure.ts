@@ -33,6 +33,7 @@ export const deskStructure = (S: StructureBuilder) =>
           )
           .icon(doc.icon),
       ),
+      S.divider(),
       ...S.documentTypeListItems().filter(
         (listItem) =>
           !Object.values(singletonDocuments).some(
