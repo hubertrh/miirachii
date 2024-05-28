@@ -1,7 +1,11 @@
+import Hero from "@/components/home/Hero";
+
 export default function Home() {
   return (
-    <div className="grid min-h-screen w-full place-items-center">
-      <h1 className="text-4xl">Miirachii</h1>
-    </div>
+    <>
+      <Hero />
+      {/* FIXME: replace with actual content */}
+      <div className="h-[200vh]" />
+    </>
   );
 }

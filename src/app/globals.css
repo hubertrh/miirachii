@@ -18,7 +18,7 @@
   h5,
   h6 {
     /* font-family: var(--font-montserrat); */
-    @apply py-4;
+    @apply py-4 font-lora;
   }
 
   p {
