@@ -3,7 +3,7 @@ import HeroBackground from "/public/hero-bg.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative grid h-screen w-full place-items-center">
+    <section className="relative grid h-svh w-full place-items-center">
       <Image
         className="opacity-40"
         src={HeroBackground}
