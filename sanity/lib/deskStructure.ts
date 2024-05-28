@@ -1,4 +1,5 @@
 import { StructureBuilder } from "sanity/structure";
+import { SquareUserRound } from "lucide-react";
 
 const singletonDocuments = {
   contactInfo: {
@@ -6,6 +7,7 @@ const singletonDocuments = {
     documentId: "e084abdf-e7a9-448c-a0df-973941522014",
     schemaType: "contactInfo",
     description: "Brand and Contact Information",
+    icon: SquareUserRound,
   },
 };
 
@@ -21,7 +23,8 @@ export const deskStructure = (S: StructureBuilder) =>
               .documentId(doc.documentId)
               .schemaType(doc.schemaType)
               .title(doc.description),
-          ),
+          )
+          .icon(doc.icon),
       ),
       ...S.documentTypeListItems().filter(
         (listItem) =>
