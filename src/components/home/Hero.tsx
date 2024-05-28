@@ -14,8 +14,8 @@ export default function Hero() {
           objectFit: "cover",
         }}
       />
-      <div className="z-10 flex flex-col gap-8">
-        <div className="relative size-48">
+      <div className="z-10 flex flex-col items-center gap-8">
+        <div className="relative size-64">
           <Image
             src={logoFull}
             alt="Miirachii Logo"
@@ -25,8 +25,8 @@ export default function Hero() {
             }}
           />
         </div>
-        <h1 className="text-4xl">Miirachii</h1>
-        <h1 className="text-4xl">Miirachii</h1>
+        <div className="h-0.5 w-20 bg-primary" />
+        <h1 className="text-6xl text-primary">Your Story, Beautifully Told</h1>
       </div>
     </section>
   );
