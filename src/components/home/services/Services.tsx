@@ -12,7 +12,10 @@ export default function Services() {
       <div className="w-128 overflow-hidden">
         <div
           className="flex items-center transition-all duration-500"
-          style={{ transform: `translateX(-${elementHovered * 100}%)` }}
+          style={{
+            transform: `translateX(-${elementHovered * 100}%)`,
+            transitionTimingFunction: "cubic-bezier(0.83, 0, 0.17, 1)",
+          }}
         >
           <ServicesTextMain />
           <ServicesTextMain />
