@@ -20,7 +20,7 @@ export default async function Hero() {
         }}
       />
       <div className="z-10 flex flex-col items-center gap-8">
-        <div className="relative size-64 transition-all duration-300 hover:scale-105">
+        <div className="relative size-64 transition-all duration-300 hover:scale-102">
           <Image
             src={brandInfo.logos.logoFull.url}
             alt="Miirachii Logo"
