@@ -3,8 +3,8 @@ import photographyImage from "/public/photography.jpg";
 import socialMediaImage from "/public/social-media.jpg";
 
 type ServicesImagesProps = {
-  elementHovered: number | null;
-  setElementHovered: (value: number | null) => void;
+  elementHovered: number;
+  setElementHovered: (value: number) => void;
 };
 
 export default function ServicesImages({
@@ -15,10 +15,10 @@ export default function ServicesImages({
     <div className="flex flex-col gap-4">
       <div
         className={`relative h-48 w-128 transition-all duration-300 hover:scale-102 ${
-          elementHovered === 1 || elementHovered === null ? "" : "blur-md"
+          elementHovered === 1 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(1)}
-        onMouseLeave={() => setElementHovered(null)}
+        onMouseLeave={() => setElementHovered(0)}
       >
         <Image
           src={photographyImage}
@@ -31,10 +31,10 @@ export default function ServicesImages({
       </div>
       <div
         className={`relative h-48 w-128 transition-all duration-300 hover:scale-102 ${
-          elementHovered === 2 || elementHovered === null ? "" : "blur-md"
+          elementHovered === 2 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(2)}
-        onMouseLeave={() => setElementHovered(null)}
+        onMouseLeave={() => setElementHovered(0)}
       >
         <Image
           src={socialMediaImage}
