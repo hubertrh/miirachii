@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function AboutText() {
   return (
     <div className="z-10 -ml-16 flex max-w-lg flex-col items-end justify-center gap-3">
-      <h1 className="text-6xl text-primary transition-all duration-300 hover:text-accent">
+      <h2 className="text-6xl text-primary transition-all duration-300 hover:text-accent">
         About Me
-      </h1>
+      </h2>
       <div className="mb-2 text-justify">
         <p>
           Welcome to miirachii, where I capture and convey stories with clarity
