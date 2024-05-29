@@ -36,6 +36,9 @@ const config: Config = {
       width: {
         128: "32rem",
       },
+      minWidth: {
+        128: "32rem",
+      },
       scale: {
         102: "1.02",
       },
