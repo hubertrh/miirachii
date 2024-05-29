@@ -5,6 +5,9 @@ import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 export default async function Hero() {
   const brandInfo = await getBrandInfo();
 
+  const hook = "Your Story, Beautifully Told";
+  const hookParts = hook.split(" ");
+
   return (
     <section className="relative grid h-svh w-full place-items-center">
       <Image
@@ -31,7 +34,14 @@ export default async function Hero() {
         </div>
         <div className="h-0.5 w-16 bg-primary" />
         <h1 className="select-none text-6xl text-primary">
-          Your Story, Beautifully Told
+          {hookParts.map((part) => (
+            <span
+              key={part}
+              className="mx-2 inline-block transition-all duration-300 hover:text-accent"
+            >
+              {part}
+            </span>
+          ))}
         </h1>
       </div>
     </section>
