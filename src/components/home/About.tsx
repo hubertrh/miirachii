@@ -4,7 +4,7 @@ import AboutText from "./AboutText";
 
 export default function About() {
   return (
-    <section className="flex h-screen items-center justify-center">
+    <section className="flex h-[110vh] items-center justify-center">
       <div className="relative size-96">
         <Image
           src={aboutImage}
