@@ -10,7 +10,7 @@ export default function Services() {
   const [elementHovered, setElementHovered] = useState<number>(0);
 
   return (
-    <section className="flex h-[110vh] items-center justify-center gap-8">
+    <section className="flex h-[105vh] items-center justify-center gap-8">
       <div
         className="w-128 overflow-hidden"
         onMouseUp={() => setElementHovered(0)}
