@@ -1,5 +1,7 @@
 import Image from "next/image";
 import aboutImage from "/public/about.jpg";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 export default function About() {
   return (
@@ -29,7 +31,13 @@ export default function About() {
             brands grow with a calm and inviting presence.
           </p>
         </div>
-        <button>See more</button>
+        <Link
+          href="/about"
+          className="group flex items-center tracking-widest underline decoration-transparent underline-offset-4 transition-all duration-300 ease-out hover:text-accent hover:decoration-accent"
+        >
+          <ChevronRight className="mr-2 size-4 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:text-accent" />
+          Learn More
+        </Link>
       </div>
     </section>
   );
