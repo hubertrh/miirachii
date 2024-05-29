@@ -14,8 +14,10 @@ export default function About() {
         />
       </div>
       <div className="z-10 -ml-16 flex max-w-lg flex-col items-end justify-center gap-2">
-        <h1 className="text-6xl">About Me</h1>
-        <div className="text-pretty text-justify tracking-widest">
+        <h1 className="text-6xl text-primary transition-all duration-300 hover:text-accent">
+          About Me
+        </h1>
+        <div className="mb-2 text-justify">
           <p>
             Welcome to miirachii, where I capture and convey stories with
             clarity and style. I&apos;m Klaudia, dedicated to bringing out the

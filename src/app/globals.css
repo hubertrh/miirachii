@@ -22,7 +22,7 @@
   }
 
   p {
-    @apply py-1;
+    @apply text-pretty py-1 tracking-widest;
   }
 }
 
