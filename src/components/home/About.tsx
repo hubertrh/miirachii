@@ -15,7 +15,7 @@ export default function About() {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="z-10 -ml-16 flex max-w-lg flex-col items-end justify-center gap-2">
+      <div className="z-10 -ml-16 flex max-w-lg flex-col items-end justify-center gap-3">
         <h1 className="text-6xl text-primary transition-all duration-300 hover:text-accent">
           About Me
         </h1>
@@ -33,10 +33,10 @@ export default function About() {
         </div>
         <Link
           href="/about"
-          className="group flex items-center tracking-widest underline decoration-transparent underline-offset-4 transition-all duration-300 ease-out hover:text-accent hover:decoration-accent"
+          className="group flex items-center text-lg capitalize tracking-widest underline decoration-transparent underline-offset-4 transition-all duration-300 ease-out hover:text-accent hover:decoration-accent"
         >
-          <ChevronRight className="mr-2 size-4 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:text-accent" />
-          Learn More
+          <ChevronRight className="mr-2 size-5 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:text-accent" />
+          Discover my story
         </Link>
       </div>
     </section>
