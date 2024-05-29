@@ -33,6 +33,15 @@ const config: Config = {
       minHeight: {
         dvh: "100dvh",
       },
+      width: {
+        128: "32rem",
+      },
+      scale: {
+        102: "1.02",
+      },
+      blur: {
+        md: "8px",
+      },
       fontFamily: {
         lora: ["var(--font-lora)"],
         sans: ["var(--font-sans)", ...fontFamily.sans],
