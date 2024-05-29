@@ -17,10 +17,11 @@ export default function ServicesImages({
       onMouseLeave={() => setElementHovered(0)}
     >
       <div
-        className={`relative h-48 w-128 transition-all duration-300 hover:scale-102 ${
+        tabIndex={0}
           elementHovered === 1 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(1)}
+        onFocus={() => setElementHovered(1)}
       >
         <Image
           src={photographyImage}
@@ -32,10 +33,11 @@ export default function ServicesImages({
         />
       </div>
       <div
-        className={`relative h-48 w-128 transition-all duration-300 hover:scale-102 ${
+        tabIndex={0}
           elementHovered === 2 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(2)}
+        onFocus={() => setElementHovered(2)}
       >
         <Image
           src={socialMediaImage}
