@@ -1,6 +1,6 @@
 export default function ServicesTextMain() {
   return (
-    <div className="flex w-128 flex-col items-start justify-center gap-10">
+    <div className="flex min-w-128 flex-col items-start justify-center gap-10">
       <h1 className="text-6xl text-primary transition-all duration-300 hover:text-accent">
         Services
       </h1>
