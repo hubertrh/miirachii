@@ -18,6 +18,7 @@ export default function ServicesImages({
     >
       <div
         tabIndex={0}
+        className={`relative h-48 w-128 shadow transition-all duration-300 hover:scale-102 ${
           elementHovered === 1 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(1)}
@@ -34,6 +35,7 @@ export default function ServicesImages({
       </div>
       <div
         tabIndex={0}
+        className={`relative h-48 w-128 shadow transition-all duration-300 hover:scale-102 ${
           elementHovered === 2 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(2)}
