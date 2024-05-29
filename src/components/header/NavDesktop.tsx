@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 type NavDesktopProps = {
   navLinks: {
@@ -9,6 +12,8 @@ type NavDesktopProps = {
 };
 
 export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+
   return (
     <nav className="flex items-center justify-center text-lg tracking-widest">
       {navLinks.map((link, index) => {
@@ -18,7 +23,9 @@ export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
           <span key={link.name} className="flex items-center">
             <Link
               href={link.href}
-              className={`hover:underline hover:underline-offset-4 ${isActive ? "text-red-500" : ""}`}
+              className={`transition-all duration-300 ease-out hover:text-accent ${isActive ? "text-red-500" : ""} ${hoveredLink && hoveredLink !== link.href ? "blur-sm" : ""}`}
+              onMouseEnter={() => setHoveredLink(link.href)}
+              onMouseLeave={() => setHoveredLink(null)}
             >
               {link.name}
             </Link>
