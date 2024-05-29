@@ -12,13 +12,15 @@ export default function ServicesImages({
   setElementHovered,
 }: ServicesImagesProps) {
   return (
-    <div className="flex flex-col gap-4">
+    <div
+      className="flex flex-col gap-4"
+      onMouseLeave={() => setElementHovered(0)}
+    >
       <div
         className={`relative h-48 w-128 transition-all duration-300 hover:scale-102 ${
           elementHovered === 1 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(1)}
-        onMouseLeave={() => setElementHovered(0)}
       >
         <Image
           src={photographyImage}
@@ -34,7 +36,6 @@ export default function ServicesImages({
           elementHovered === 2 || elementHovered === 0 ? "" : "blur-md"
         }`}
         onMouseEnter={() => setElementHovered(2)}
-        onMouseLeave={() => setElementHovered(0)}
       >
         <Image
           src={socialMediaImage}
