@@ -6,12 +6,14 @@ export default function About() {
   return (
     <section className="flex h-screen items-center justify-center">
       <div className="relative size-96">
-        <div className="absolute -left-8 top-8 size-full bg-primary" />
         <Image
           src={aboutImage}
           alt="About Image"
           fill
-          style={{ objectFit: "cover" }}
+          style={{
+            objectFit: "cover",
+            boxShadow: "-32px 32px 0px 0px #806B59",
+          }}
         />
       </div>
       <AboutText />
