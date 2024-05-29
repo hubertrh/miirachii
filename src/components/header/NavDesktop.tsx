@@ -70,7 +70,7 @@ export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
               </Tooltip>
             </TooltipProvider>
             {index < tooltipLinks.length - 1 && (
-              <span className="mx-4 text-sm">•</span>
+              <span className="mx-4 text-sm text-primary">•</span>
             )}
           </span>
         );
