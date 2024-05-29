@@ -6,7 +6,7 @@ export default async function Header() {
   const brandInfo = await getBrandInfo();
 
   return (
-    <header className="fixed top-0 z-20 grid w-full grid-cols-3 px-6">
+    <header className="fixed top-0 z-20 grid w-full grid-cols-5 px-6">
       {/* TODO: opacity-100 and size-32 on scroll down */}
       <div className="relative size-20 opacity-0">
         <Image
@@ -21,6 +21,7 @@ export default async function Header() {
         />
       </div>
       <Nav />
+      <div />
     </header>
   );
 }
