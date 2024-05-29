@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ServicesTextMain from "./ServicesTextMain";
 import ServicesImages from "./ServicesImages";
+import ServicesTextPhotography from "./ServicesTextPhotography";
 import ServicesTextSocialMedia from "./ServicesTextSocialMedia";
 
 export default function Services() {
@@ -22,7 +23,7 @@ export default function Services() {
           }}
         >
           <ServicesTextMain />
-          <ServicesTextMain />
+          <ServicesTextPhotography />
           <ServicesTextSocialMedia />
         </div>
       </div>
