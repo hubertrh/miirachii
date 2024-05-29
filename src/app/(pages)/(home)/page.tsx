@@ -8,8 +8,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      {/* FIXME: replace with actual content */}
-      <div className="h-[200vh]" />
+      {/* FIXME: Add content before release*/}
     </>
   );
 }

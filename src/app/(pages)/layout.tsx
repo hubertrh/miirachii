@@ -51,6 +51,7 @@ export default function RootLayout({
       />
       <Header />
       <main className="min-h-screen">{children}</main>
+      {/* FIXME: Add footer before release*/}
       <Analytics />
       <SpeedInsights />
     </body>
