@@ -28,7 +28,7 @@ export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   return (
-    <nav className="flex items-center justify-center text-lg tracking-widest">
+    <nav className="my-auto flex h-11 items-center justify-center rounded-full bg-offwhite/40 text-lg tracking-widest backdrop-blur-lg">
       {/* TODO: Replace tooltipLinks with navLinks when ready */}
       {/* {navLinks.map((link, index) => {
         const isActive = pathname === link.href;
