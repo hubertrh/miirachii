@@ -8,7 +8,7 @@ import { ExternalLink } from "lucide-react";
 
 export default function SocialLinks() {
   return (
-    <div className="flex items-center justify-end gap-5">
+    <div className="flex items-center justify-center gap-5">
       <Link
         href={"https://www.instagram.com/miirachiii"}
         target="_blank"
