@@ -19,13 +19,14 @@ export default function AboutText() {
           grow with a calm and inviting presence.
         </p>
       </div>
-      <Link
+      {/* TODO: Uncomment when ready */}
+      {/* <Link
         href="/about"
         className="group flex items-center text-lg capitalize tracking-widest underline decoration-transparent underline-offset-4 transition-all duration-300 ease-out hover:text-accent hover:decoration-accent"
       >
         <ChevronRight className="mr-2 size-5 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:text-accent" />
         Discover my story
-      </Link>
+      </Link> */}
     </div>
   );
 }
