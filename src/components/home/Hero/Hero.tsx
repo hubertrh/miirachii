@@ -1,6 +1,6 @@
 import Image from "next/image";
 import heroBackground from "/public/hero-bg.jpg";
-import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
+import { getBrandInfo } from "../../../../sanity/groqGetters/getBrandInfo";
 
 export default async function Hero() {
   const brandInfo = await getBrandInfo();
