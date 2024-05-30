@@ -7,10 +7,6 @@
     @apply selection:bg-accent selection:text-white;
   }
 
-  /* body {
-    @apply bg-background text-gray-dark;
-  } */
-
   h1,
   h2,
   h3,
