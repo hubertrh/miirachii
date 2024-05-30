@@ -67,7 +67,11 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
         )}
         {tooltipLinks.map((link, index) => {
           return (
-            <span key={link.name} className="flex items-center" tabIndex={0}>
+            <span
+              key={link.name}
+              className="flex items-center transition-all duration-300 ease-out"
+              tabIndex={0}
+            >
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
