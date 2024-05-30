@@ -7,6 +7,7 @@ export default async function Header() {
   const brandInfo = await getBrandInfo();
 
   return (
+    // FIXME: Change it for the Logo from layout to be fully clickable
     <header className="fixed top-0 z-20 grid w-full grid-cols-5 px-6">
       {/* TODO: opacity-100 and size-32 on scroll down */}
       <div className="relative size-20 opacity-0">

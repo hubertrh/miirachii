@@ -3,9 +3,12 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import NextTopLoader from "nextjs-toploader";
 import { Lora, Quicksand } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import logoFull from "@/assets/images/logo-full.png";
 
 export const metadata: Metadata = {
   title: "Miirachii",
@@ -39,7 +42,7 @@ export default function RootLayout({
   return (
     <body
       className={`${quicksand.className} ${lora.variable} ${cn(
-        "min-h-screen bg-background font-sans text-coal antialiased",
+        "relative min-h-screen bg-background font-sans text-coal antialiased",
         fontSans.variable,
       )}`}
     >
@@ -53,6 +56,18 @@ export default function RootLayout({
         speed={500}
       /> */}
       <Header />
+      <Link href={"/"} className="fixed left-0 top-0 h-32 w-48 px-10">
+        <div className="relative size-full">
+          <Image
+            src={logoFull}
+            alt="Miirachii"
+            fill
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </div>
+      </Link>
       <main className="min-h-screen">{children}</main>
       <Footer />
       <Analytics />
