@@ -4,18 +4,23 @@ import instagramAccentIcon from "/public/icons/instagram-accent.svg";
 import linkedinIcon from "/public/icons/linkedin.svg";
 import linkedinAccentIcon from "/public/icons/linkedin-accent.svg";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 
-export default function SocialLinks() {
+type SocialLinksProps = {
+  variant?: "header" | "footer";
+};
+
+export default function SocialLinks({ variant = "header" }: SocialLinksProps) {
   return (
     <div className="flex items-center justify-center gap-5">
       <Link
         href={"https://www.instagram.com/miirachiii"}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex size-10 items-center justify-center rounded-full border border-primary bg-offwhite/30 backdrop-blur-lg transition-all duration-300 hover:scale-95 hover:border-accent"
+        className={`group flex items-center justify-center rounded-full border border-primary bg-offwhite/30 backdrop-blur-lg transition-all duration-300 hover:scale-95 hover:border-accent ${variant === "header" ? "p-2.5" : "p-3.5"}`}
       >
-        <div className="relative size-5">
+        <div
+          className={`relative ${variant === "header" ? "size-5" : "size-6"}`}
+        >
           <Image src={instagramIcon} alt="Instagram" fill />
           <Image
             className="opacity-0 transition-all duration-300 group-hover:opacity-100"
@@ -23,16 +28,17 @@ export default function SocialLinks() {
             alt="Instagram"
             fill
           />
-          <ExternalLink className="absolute right-1/2 top-1/2 size-3 -translate-y-1/2 translate-x-1/2 text-accent opacity-0 transition-all duration-300 ease-out group-hover:-right-1/2 group-hover:-top-1/2 group-hover:opacity-100" />
         </div>
       </Link>
       <Link
         href={"https://www.linkedin.com/in/klaudiarogala/"}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex size-10 items-center justify-center rounded-full border border-primary bg-offwhite/30 backdrop-blur-lg transition-all duration-300 hover:scale-95 hover:border-accent"
+        className={`group flex items-center justify-center rounded-full border border-primary bg-offwhite/30 backdrop-blur-lg transition-all duration-300 hover:scale-95 hover:border-accent ${variant === "header" ? "p-2.5" : "p-3.5"}`}
       >
-        <div className="relative size-5">
+        <div
+          className={`relative ${variant === "header" ? "size-5" : "size-6"}`}
+        >
           <Image src={linkedinIcon} alt="Instagram" fill />
           <Image
             className="opacity-0 transition-all duration-300 group-hover:opacity-100"
@@ -40,7 +46,6 @@ export default function SocialLinks() {
             alt="LinkedIn"
             fill
           />
-          <ExternalLink className="absolute right-1/2 top-1/2 size-3 -translate-y-1/2 translate-x-1/2 text-accent opacity-0 transition-all duration-300 ease-out group-hover:-right-1/2 group-hover:-top-1/2 group-hover:opacity-100" />
         </div>
       </Link>
     </div>

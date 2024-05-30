@@ -5,6 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 import { Lora, Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Miirachii",
@@ -51,7 +52,7 @@ export default function RootLayout({
       />
       <Header />
       <main className="min-h-screen">{children}</main>
-      {/* FIXME: Add footer before release*/}
+      <Footer />
       <Analytics />
       <SpeedInsights />
     </body>

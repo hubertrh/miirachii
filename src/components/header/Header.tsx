@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
-import Nav from "./Nav";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "../ui/SocialLinks";
+import NavDesktop from "./NavDesktop";
 
 export default async function Header() {
   const brandInfo = await getBrandInfo();
@@ -21,7 +21,7 @@ export default async function Header() {
           }}
         />
       </div>
-      <Nav />
+      <NavDesktop />
       <SocialLinks />
     </header>
   );

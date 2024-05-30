@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   Tooltip,
   TooltipContent,
@@ -10,14 +10,19 @@ import {
 } from "../ui/tooltip";
 
 type NavDesktopProps = {
-  navLinks: {
-    href: string;
-    name: string;
-  }[];
-  pathname: string;
+  variant?: "header" | "footer";
 };
 
-export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
+export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/about", name: "about" },
+    { href: "/services", name: "services" },
+    { href: "/portfolio", name: "portfolio" },
+    { href: "/contact", name: "contact" },
+  ];
+
   const tooltipLinks = [
     { name: "about" },
     { name: "services" },
@@ -29,7 +34,9 @@ export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
 
   return (
     <div className="col-span-3 flex items-center justify-center">
-      <nav className="flex h-11 items-center justify-center rounded-full bg-offwhite/40 px-5 text-lg tracking-widest backdrop-blur-lg">
+      <nav
+        className={`flex h-11 items-center justify-center rounded-full bg-offwhite/40 px-5 text-lg tracking-widest backdrop-blur-lg ${variant === "header" ? "bg-offwhite/40" : "bg-offwhite/20"}`}
+      >
         {/* TODO: Replace tooltipLinks with navLinks when ready */}
         {/* {navLinks.map((link, index) => {
         const isActive = pathname === link.href;
@@ -58,7 +65,7 @@ export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
                   <TooltipTrigger asChild>
                     <p
                       key={link.name}
-                      className={`select-none text-stone-500 transition-all duration-300 ease-out hover:text-accent ${hoveredLink && hoveredLink !== link.name ? "blur-sm" : ""}`}
+                      className={`select-none transition-all duration-300 ease-out hover:text-accent ${hoveredLink && hoveredLink !== link.name ? "blur-sm" : ""} ${variant === "header" ? "text-primary" : "text-white"}`}
                       onMouseEnter={() => setHoveredLink(link.name)}
                       onMouseLeave={() => setHoveredLink(null)}
                     >
@@ -71,7 +78,11 @@ export default function NavDesktop({ navLinks, pathname }: NavDesktopProps) {
                 </Tooltip>
               </TooltipProvider>
               {index < tooltipLinks.length - 1 && (
-                <span className="mx-4 text-sm text-primary">•</span>
+                <span
+                  className={`mx-4 text-sm ${variant === "header" ? "text-primary" : "text-white"}`}
+                >
+                  •
+                </span>
               )}
             </span>
           );
