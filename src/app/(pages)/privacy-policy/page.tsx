@@ -1,20 +1,15 @@
 import { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
+import { getBrandInfo } from "../../../../sanity/groqGetters/getBrandInfo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
 };
 
 export default async function page() {
-  // TODO: Replace with actual brand details
-  // const brandDetails = await getBrandDetails();
-  const brandDetails = {
-    name: "Miirachii",
-    email: "hello@miirachii.com",
-  };
-
-  const companyURL = await headers().get("host");
+  const brandInfo = await getBrandInfo();
+  const siteURL = await headers().get("host");
 
   return (
     <section className="relative mx-auto w-[85vw] max-w-4xl py-24 text-justify md:w-[90vw]">
@@ -32,13 +27,14 @@ export default async function page() {
       <div className="my-2.5 flex flex-col gap-1.5">
         <p>
           This Privacy Policy describes the policies of{" "}
-          <strong className="font-semibold">{brandDetails.name}</strong>, email:{" "}
+          <strong className="font-semibold">{brandInfo.brandName}</strong>,
+          email:{" "}
           <strong className="font-semibold">
             <a
-              href={`mailto:${brandDetails.email}`}
+              href={`mailto:${brandInfo.email}`}
               className="underline underline-offset-4 transition-all duration-300 hover:text-accent hover:decoration-accent hover:underline-offset-[6px]"
             >
-              {brandDetails.email}
+              {brandInfo.email}
             </a>
           </strong>
           , on the collection, use and disclosure of your information that we
@@ -48,7 +44,7 @@ export default async function page() {
               href="/"
               className="underline underline-offset-4 transition-all duration-300 hover:text-accent hover:decoration-accent hover:underline-offset-[6px]"
             >
-              https://{companyURL}/
+              https://{siteURL}/
             </Link>
           </strong>
           ). (the “Service”). By accessing or using the Service, you are
@@ -101,10 +97,10 @@ export default async function page() {
           relevant under applicable laws. To exercise these rights, you can
           write to us at{" "}
           <a
-            href={`mailto:${brandDetails.email}`}
+            href={`mailto:${brandInfo.email}`}
             className="underline underline-offset-4 transition-all duration-300 hover:text-accent hover:underline-offset-[6px]"
           >
-            {brandDetails.email}
+            {brandInfo.email}
           </a>
           . We will respond to your request in accordance with applicable law.
         </p>
@@ -146,10 +142,10 @@ export default async function page() {
           If you have any queries or concerns about the processing of your
           information that is available with us, you may email us at{" "}
           <a
-            href={`mailto:${brandDetails.email}`}
+            href={`mailto:${brandInfo.email}`}
             className="underline underline-offset-4 transition-all duration-300 hover:text-accent hover:underline-offset-[6px]"
           >
-            {brandDetails.email}
+            {brandInfo.email}
           </a>
           .
         </p>
