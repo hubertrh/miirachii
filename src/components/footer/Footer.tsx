@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import logoFull from "../../assets/images/logo-full.png";
 import SocialLinks from "../ui/SocialLinks";
 import NavDesktop from "../header/NavDesktop";
-import Link from "next/link";
 
 export default function Footer() {
   return (
