@@ -1,5 +1,5 @@
 import SocialLinks from "../ui/SocialLinks";
-import NavDesktop from "./NavDesktop";
+import NavDesktop from "../ui/NavDesktop";
 
 export default function Header() {
   return (

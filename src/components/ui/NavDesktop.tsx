@@ -8,7 +8,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ui/tooltip";
+} from "./tooltip";
 
 type NavDesktopProps = {
   variant?: "header" | "footer";
