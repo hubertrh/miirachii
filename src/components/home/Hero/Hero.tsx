@@ -14,6 +14,8 @@ export default async function Hero() {
         className="opacity-40"
         src={heroBackground}
         alt="Hero Background"
+        priority
+        placeholder="blur"
         fill
         style={{
           objectFit: "cover",
@@ -24,6 +26,7 @@ export default async function Hero() {
           <Image
             src={brandInfo.logos.logoFull.url}
             alt="Miirachii Logo"
+            priority
             placeholder="blur"
             blurDataURL={brandInfo.logos.logoFull.metadata.lqip}
             fill
