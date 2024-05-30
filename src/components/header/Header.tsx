@@ -13,6 +13,7 @@ export default async function Header() {
         <Image
           src={brandInfo.logos.logoMinimal.url}
           alt="Miirachii Logo"
+          priority
           placeholder="blur"
           blurDataURL={brandInfo.logos.logoMinimal.metadata.lqip}
           fill
