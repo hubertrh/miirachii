@@ -43,13 +43,15 @@ export default function RootLayout({
         fontSans.variable,
       )}`}
     >
-      <NextTopLoader
+      {/* TODO: Implement smooth scrolling */}
+      {/* TODO: Uncomment NextTopLoader when other pages are ready */}
+      {/* <NextTopLoader
         color="#3A3E64"
         height={5}
         initialPosition={0.2}
         easing="ease"
         speed={500}
-      />
+      /> */}
       <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />
