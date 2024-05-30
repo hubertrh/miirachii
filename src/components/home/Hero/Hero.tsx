@@ -9,7 +9,7 @@ export default async function Hero() {
   const hookParts = hook.split(" ");
 
   return (
-    <section className="relative grid h-svh w-full place-items-center">
+    <section className="relative grid h-svh w-full place-items-center bg-background">
       <Image
         className="opacity-40"
         src={heroBackground}
