@@ -60,7 +60,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col items-end justify-center leading-tight">
-            <p>Miirachii &copy; {new Date().getFullYear()}</p>
+            <p>miirachii &copy; {new Date().getFullYear()}</p>
             <p>
               <span className="text-secondary">Created by </span>
               <a
