@@ -9,7 +9,7 @@ import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Miirachii",
-  // TODO: Change description
+  // TODO: Get dynamic description (?)
   description: "Miirachii's personal website",
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
       )}`}
     >
       {/* TODO: Implement smooth scrolling */}
-      {/* TODO: Uncomment NextTopLoader when other pages are ready */}
+      {/* TODO: Uncomment NextTopLoader when other pages are ready, then change #id links from <Link> to <a> (?) */}
       {/* <NextTopLoader
         color="#3A3E64"
         height={5}
