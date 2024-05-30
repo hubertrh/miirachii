@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import {
   Tooltip,
   TooltipContent,
@@ -17,17 +18,17 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: "/about", name: "about" },
-    { href: "/services", name: "services" },
-    { href: "/portfolio", name: "portfolio" },
-    { href: "/contact", name: "contact" },
+    { href: "#about", name: "about" },
+    { href: "#services", name: "services" },
+    // { href: "/portfolio", name: "portfolio" },
+    { href: "#contact", name: "contact" },
   ];
 
   const tooltipLinks = [
-    { name: "about" },
-    { name: "services" },
+    // { name: "about" },
+    // { name: "services" },
     { name: "portfolio" },
-    { name: "contact" },
+    // { name: "contact" },
   ];
 
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -38,25 +39,32 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
         className={`flex h-11 items-center justify-center rounded-full bg-offwhite/40 px-5 text-lg tracking-widest backdrop-blur-lg ${variant === "header" ? "bg-offwhite/40" : "bg-offwhite/20"}`}
       >
         {/* TODO: Replace tooltipLinks with navLinks when ready */}
-        {/* {navLinks.map((link, index) => {
-        const isActive = pathname === link.href;
+        {navLinks.map((link, index) => {
+          const isActive = pathname === link.href;
 
-        return (
-          <span key={link.name} className="flex items-center">
-            <Link
-              href={link.href}
-              className={`transition-all duration-300 ease-out hover:text-accent ${isActive ? "text-red-500" : ""} ${hoveredLink && hoveredLink !== link.href ? "blur-sm" : ""}`}
-              onMouseEnter={() => setHoveredLink(link.href)}
-              onMouseLeave={() => setHoveredLink(null)}
-            >
-              {link.name}
-            </Link>
-            {index < navLinks.length - 1 && (
-              <span className="mx-4 text-sm">•</span>
-            )}
+          return (
+            <span key={link.name} className="flex items-center">
+              <Link
+                href={link.href}
+                className={`transition-all duration-300 ease-out hover:text-accent ${isActive ? "text-red-500" : ""} ${hoveredLink && hoveredLink !== link.href ? "blur-sm" : ""} ${variant === "header" ? "text-primary" : "text-white"}`}
+                onMouseEnter={() => setHoveredLink(link.href)}
+                onMouseLeave={() => setHoveredLink(null)}
+              >
+                {link.name}
+              </Link>
+              {index < navLinks.length - 1 && (
+                <span className="mx-4 text-sm">•</span>
+              )}
+            </span>
+          );
+        })}
+        {tooltipLinks.length > 0 && navLinks.length > 0 && (
+          <span
+            className={`mx-4 text-sm ${variant === "header" ? "text-primary" : "text-white"}`}
+          >
+            •
           </span>
-        );
-      })} */}
+        )}
         {tooltipLinks.map((link, index) => {
           return (
             <span key={link.name} className="flex items-center">

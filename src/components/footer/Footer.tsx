@@ -7,6 +7,7 @@ import NavDesktop from "../header/NavDesktop";
 export default function Footer() {
   return (
     <footer
+      id="contact"
       className="h-[36rem] w-full bg-primary text-offwhite"
       style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
     >
