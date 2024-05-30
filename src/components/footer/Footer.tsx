@@ -2,6 +2,7 @@ import Image from "next/image";
 import logoFull from "../../assets/images/logo-full.png";
 import SocialLinks from "../ui/SocialLinks";
 import NavDesktop from "../header/NavDesktop";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -44,14 +45,22 @@ export default function Footer() {
         <div className="h-px w-full bg-secondary" />
         <div className="flex items-center justify-between">
           <div className="flex flex-col items-start justify-center">
-            <p className="leading-tight">Section3</p>
-            <p className="leading-tight">Section33333</p>
+            <Link
+              href="/cookie-policy"
+              className="py-1 transition-all duration-300 hover:translate-x-2"
+            >
+              Cookie Policy
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="py-1 transition-all duration-300 hover:translate-x-2"
+            >
+              Privacy Policy
+            </Link>
           </div>
-          <div className="flex flex-col items-end justify-center">
-            <p className="leading-tight">
-              Miirachii &copy; {new Date().getFullYear()}
-            </p>
-            <p className="leading-tight">
+          <div className="flex flex-col items-end justify-center leading-tight">
+            <p>Miirachii &copy; {new Date().getFullYear()}</p>
+            <p>
               <span className="text-secondary">Created by </span>
               <a href="https://www.linkedin.com/in/hubertrh/">
                 Hubert Rogala-Haracz
