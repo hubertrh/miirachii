@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-end justify-center gap-8">
             <NavDesktop variant="footer" />
-            <div className="flex flex-col items-end justify-center pt-10">
+            <div className="flex flex-col items-end justify-center pt-6">
               <p>Get in touch!</p>
               <a
                 href="mailto:hello@miirachii.com"
