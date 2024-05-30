@@ -62,7 +62,10 @@ export default function Footer() {
             <p>Miirachii &copy; {new Date().getFullYear()}</p>
             <p>
               <span className="text-secondary">Created by </span>
-              <a href="https://www.linkedin.com/in/hubertrh/">
+              <a
+                href="https://www.linkedin.com/in/hubertrh/"
+                className="transition-all duration-300 hover:text-accent"
+              >
                 Hubert Rogala-Haracz
               </a>
             </p>
