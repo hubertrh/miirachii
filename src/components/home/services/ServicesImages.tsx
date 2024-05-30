@@ -1,6 +1,7 @@
 import Image from "next/image";
 import photographyImage from "/public/photography.jpg";
 import socialMediaImage from "/public/social-media.jpg";
+import swipeIcon from "/public/icons/swipe.svg";
 
 type ServicesImagesProps = {
   elementHovered: number;
@@ -13,9 +14,14 @@ export default function ServicesImages({
 }: ServicesImagesProps) {
   return (
     <div
-      className="flex flex-col gap-4"
+      className="relative flex flex-col gap-4"
       onMouseLeave={() => setElementHovered(0)}
     >
+      <div className="absolute -right-10 top-3 -rotate-45">
+        <div className="relative size-6">
+          <Image src={swipeIcon} alt="Swipe Icon" fill />
+        </div>
+      </div>
       <div
         tabIndex={0}
         className={`relative h-48 w-128 shadow transition-all duration-300 hover:scale-102 ${
