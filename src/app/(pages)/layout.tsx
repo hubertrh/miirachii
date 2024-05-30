@@ -55,8 +55,10 @@ export default function RootLayout({
         easing="ease"
         speed={500}
       /> */}
-      <Header />
-      <Link href={"/"} className="fixed left-0 top-0 h-32 w-48 px-10">
+      <Link
+        href={"/"}
+        className="fixed left-0 top-0 h-32 w-48 px-10 transition-all duration-300 ease-out"
+      >
         <div className="relative size-full">
           <Image
             src={logoFull}
@@ -68,6 +70,7 @@ export default function RootLayout({
           />
         </div>
       </Link>
+      <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />
       <Analytics />
