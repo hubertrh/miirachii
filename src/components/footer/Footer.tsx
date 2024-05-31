@@ -37,7 +37,7 @@ export default function Footer() {
                 href="mailto:contact@miirachii.com"
                 className="text-5xl transition-all duration-300 hover:text-accent"
               >
-                hello@miirachii.com
+                contact@miirachii.com
               </a>
             </div>
             <SocialLinks variant="footer" />
