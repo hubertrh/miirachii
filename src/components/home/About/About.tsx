@@ -4,7 +4,10 @@ import AboutText from "./AboutText";
 
 export default function About() {
   return (
-    <section id="about" className="flex h-[105vh] items-center justify-center">
+    <section
+      id="about"
+      className="flex h-[105vh] items-center justify-center bg-background"
+    >
       <div className="relative size-96">
         <Image
           src={aboutImage}

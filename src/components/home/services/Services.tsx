@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="flex h-[105vh] items-center justify-center gap-8"
+      className="flex h-[105vh] items-center justify-center gap-8 bg-background"
     >
       <div
         className="w-128 overflow-hidden"
