@@ -8,7 +8,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import logoFull from "@/assets/images/logo-full.png";
+import HeaderLink from "@/components/header/HeaderLink";
 
 export const metadata: Metadata = {
   title: "Miirachii",
@@ -55,21 +55,7 @@ export default function RootLayout({
         easing="ease"
         speed={500}
       /> */}
-      <Link
-        href={"/"}
-        className="fixed left-0 top-0 h-32 w-48 px-10 transition-all duration-300 ease-out"
-      >
-        <div className="relative size-full">
-          <Image
-            src={logoFull}
-            alt="Miirachii"
-            fill
-            style={{
-              objectFit: "contain",
-            }}
-          />
-        </div>
-      </Link>
+      <HeaderLink />
       <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />
