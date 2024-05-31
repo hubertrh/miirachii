@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  /* * {
-    @apply selection:bg-accent-secondary selection:text-white;
-  } */
+  * {
+    @apply selection:bg-accent selection:text-white;
+  }
 
-  /* body {
-    @apply bg-background text-gray-dark;
-  } */
+  *:focus-visible {
+    outline: 2px solid #3a3e64;
+    outline-offset: 6px;
+  }
 
   h1,
   h2,
@@ -18,11 +19,11 @@
   h5,
   h6 {
     /* font-family: var(--font-montserrat); */
-    @apply py-4 font-lora;
+    @apply py-6 font-lora tracking-[0.4rem];
   }
 
   p {
-    @apply py-1;
+    @apply text-pretty py-1 tracking-widest;
   }
 }
 
