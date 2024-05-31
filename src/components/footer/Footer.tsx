@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="flex flex-col items-end justify-center pt-6">
               <p>Get in touch!</p>
               <a
-                href="mailto:hello@miirachii.com"
+                href="mailto:contact@miirachii.com"
                 className="text-5xl transition-all duration-300 hover:text-accent"
               >
                 hello@miirachii.com
