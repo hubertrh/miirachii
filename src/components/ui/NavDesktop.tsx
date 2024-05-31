@@ -35,7 +35,7 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
 
   return (
     <div
-      className={`${variant === "header" ? "fixed left-1/2 top-0 z-20 -translate-x-1/2" : ""} flex h-20 items-center justify-center`}
+      className={`${variant === "header" ? "fixed left-1/2 top-0 z-30 -translate-x-1/2" : ""} flex h-20 items-center justify-center`}
     >
       <nav
         className={`flex h-11 items-center justify-center rounded-full bg-offwhite/40 px-5 text-lg tracking-widest backdrop-blur-md ${variant === "header" ? "bg-offwhite/40" : "bg-offwhite/20"}`}

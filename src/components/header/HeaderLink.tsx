@@ -6,7 +6,7 @@ export default function HeaderLink() {
   return (
     <Link
       href={"/"}
-      className="fixed left-0 top-0 h-32 w-48 px-10 transition-all duration-300 ease-out"
+      className="fixed left-0 top-0 z-10 h-32 w-36 px-6 transition-all duration-300 ease-out hover:scale-95"
     >
       <div className="relative size-full">
         <Image

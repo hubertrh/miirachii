@@ -9,7 +9,7 @@ export default async function Hero() {
   const hookParts = hook.split(" ");
 
   return (
-    <section className="relative grid h-svh w-full place-items-center bg-background">
+    <section className="relative z-10 grid h-svh w-full place-items-center bg-background">
       <Image
         className="opacity-40"
         src={heroBackground}
@@ -21,7 +21,7 @@ export default async function Hero() {
           objectFit: "cover",
         }}
       />
-      <div className="z-10 flex flex-col items-center gap-8">
+      <div className="z-20 flex flex-col items-center gap-8">
         <div className="relative size-64 transition-all duration-300 hover:scale-102">
           <Image
             src={brandInfo.logos.logoFull.url}

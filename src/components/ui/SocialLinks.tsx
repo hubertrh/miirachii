@@ -12,7 +12,7 @@ type SocialLinksProps = {
 export default function SocialLinks({ variant = "header" }: SocialLinksProps) {
   return (
     <div
-      className={`${variant === "header" ? "fixed right-12 top-0 z-20" : ""} flex h-20 items-center justify-center`}
+      className={`${variant === "header" ? "fixed right-12 top-0 z-30" : ""} flex h-20 items-center justify-center`}
     >
       <div className="flex items-center justify-center gap-5">
         <Link
