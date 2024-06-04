@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero/Hero";
+import PortfolioCategories from "@/components/portfolio/PortfolioCategories";
 
 export default function page() {
   return (
     <>
-      <Hero variant="services" />
-      <div className="min-h-screen"></div>
+      <Hero variant="portfolio" />
+      <PortfolioCategories />
     </>
   );
 }
