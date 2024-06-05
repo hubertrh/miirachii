@@ -38,7 +38,7 @@ export default function PortfolioCategories() {
       id="portfolio-categories"
       className="relative grid grid-cols-3 items-center justify-center bg-background"
     >
-      <div className="absolute bottom-[calc(50vh-10rem)] left-12 top-[50vh] border-0 border-red-300">
+      <div className="absolute bottom-[calc(50vh-22rem)] left-12 top-[50vh] border-0 border-red-300">
         <div className="sticky inset-y-1/2 right-0 w-fit -translate-y-1/2">
           <p
             ref={category1Ref}
