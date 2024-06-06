@@ -44,13 +44,13 @@ export default function PortfolioCategories() {
             ref={category1Ref}
             className={`!leading-7 transition-all duration-500 ${visibleImage === "image1" ? "text-3xl font-medium" : ""}`}
           >
-            — Portrait Photography
+            Portrait Photography
           </p>
           <p
             ref={category2Ref}
             className={`!leading-7 transition-all duration-500 ${visibleImage === "image2" ? "text-3xl font-medium" : ""}`}
           >
-            — Event Photography
+            Event Photography
           </p>
         </div>
       </div>
