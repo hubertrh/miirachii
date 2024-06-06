@@ -1,10 +1,10 @@
 import { SchemaTypeDefinition } from "sanity";
 import brandInfoSchema from "./brandInfoSchema";
 import homepageSchema from "./homepageSchema";
-import categoriesSchema from "./categoriesSchema";
+import portfolioCategoriesSchema from "./portfolioCategoriesSchema";
 
 const schemas: { types: SchemaTypeDefinition[] } = {
-  types: [brandInfoSchema, homepageSchema, categoriesSchema],
+  types: [brandInfoSchema, homepageSchema, portfolioCategoriesSchema],
 };
 
 export default schemas;
