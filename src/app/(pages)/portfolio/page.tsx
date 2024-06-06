@@ -1,10 +1,13 @@
+import { getPortfolioPage } from "../../../../sanity/groqGetters/getPortfolioCategories";
 import Hero from "@/components/Hero/Hero";
 import PortfolioCategories from "@/components/portfolio/PortfolioCategories";
 
-export default function page() {
+export default async function page() {
+  const pageContent = await getPortfolioPage();
+
   return (
     <>
-      <Hero variant="portfolio" />
+      <Hero hook={pageContent.hook} />
       <PortfolioCategories />
     </>
   );

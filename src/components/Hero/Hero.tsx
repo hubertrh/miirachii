@@ -3,27 +3,11 @@ import heroBackground from "/public/hero-bg.jpg";
 import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 
 type HeroProps = {
-  variant?: "home" | "about" | "services" | "portfolio" | "contact";
+  hook: string;
 };
 
-export default async function Hero({ variant = "home" }: HeroProps) {
+export default async function Hero({ hook }: HeroProps) {
   const brandInfo = await getBrandInfo();
-
-  let hook = "";
-
-  if (variant === "home") {
-    hook = "Your Story, Beautifully Told";
-  } else if (variant === "about") {
-    hook = "Get to Know Me";
-  } else if (variant === "services") {
-    hook = "What I Can Do for You";
-  } else if (variant === "portfolio") {
-    hook = "My Work, Beautifully Done";
-  } else if (variant === "contact") {
-    hook = "Let's Connect";
-  }
-
-  // const hook = "Your Story, Beautifully Told";
   const hookParts = hook.split(" ");
 
   return (
