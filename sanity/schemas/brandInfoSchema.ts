@@ -31,6 +31,15 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "heroImage",
+      title: "Hero Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      validation: (rule) => rule.required().assetRequired(),
+    }),
+    defineField({
       name: "email",
       title: "Email",
       type: "email",

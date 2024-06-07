@@ -20,11 +20,14 @@ export async function getBrandInfo(): Promise<BrandInfo> {
           }
         }
       },
+      "heroImage": heroImage.asset->{
+        url,
+        metadata {
+          lqip
+        }
+      },
       email,
-      "socials": {
-        instagram,
-        linkedin
-      }
+      socials
     }
   `;
 

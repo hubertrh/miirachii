@@ -5,7 +5,8 @@ import Services from "@/components/home/services/Services";
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* TODO: Replace with data from Sanity */}
+      <Hero hook="Your Story, Beautifully Told" />
       <About />
       <Services />
       {/* FIXME: Add content before release*/}

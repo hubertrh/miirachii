@@ -16,6 +16,12 @@ export type BrandInfo = {
       };
     };
   };
+  heroImage: {
+    url: ImageAsset["url"];
+    metadata: {
+      lqip: ImageAsset["metadata"]["lqip"];
+    };
+  };
   email: string;
   socials: {
     instagram: string;

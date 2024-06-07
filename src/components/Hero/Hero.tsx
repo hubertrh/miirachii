@@ -1,5 +1,4 @@
 import Image from "next/image";
-import heroBackground from "/public/hero-bg.jpg";
 import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 
 type HeroProps = {
@@ -13,11 +12,12 @@ export default async function Hero({ hook }: HeroProps) {
   return (
     <section className="relative z-10 grid h-svh w-full place-items-center bg-background">
       <Image
-        className="opacity-40"
-        src={heroBackground}
+        className="opacity-50"
+        src={brandInfo.heroImage.url}
         alt="Hero Background"
         priority
         placeholder="blur"
+        blurDataURL={brandInfo.heroImage.metadata.lqip}
         fill
         style={{
           objectFit: "cover",
