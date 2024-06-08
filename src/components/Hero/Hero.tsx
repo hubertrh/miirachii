@@ -12,15 +12,15 @@ export default async function Hero({ hook }: HeroProps) {
   return (
     <section className="relative z-10 grid h-svh w-full place-items-center bg-background">
       <Image
-        className="opacity-40"
-        src={brandInfo.heroImage.url}
+        src={brandInfo.heroImage.image.url}
         alt="Hero Background"
         priority
         placeholder="blur"
-        blurDataURL={brandInfo.heroImage.metadata.lqip}
+        blurDataURL={brandInfo.heroImage.image.metadata.lqip}
         fill
         style={{
           objectFit: "cover",
+          opacity: `0.${brandInfo.heroImage.opacity}`,
         }}
       />
       <div className="z-20 flex flex-col items-center gap-8">
