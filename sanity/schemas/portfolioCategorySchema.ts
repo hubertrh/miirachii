@@ -26,6 +26,23 @@ export default defineType({
       },
       validation: (rule) => rule.required().assetRequired(),
     }),
+    defineField({
+      name: "categoryImages",
+      title: "Category Images",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+      options: {
+        layout: "grid",
+      },
+      validation: (rule) => rule.required(),
+    }),
   ],
   preview: {
     select: {
