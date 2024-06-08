@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
+import Link from "next/link";
 
 type HeroProps = {
   hook: string;
@@ -24,7 +25,10 @@ export default async function Hero({ hook }: HeroProps) {
         }}
       />
       <div className="z-20 flex flex-col items-center gap-8">
-        <div className="relative size-64 transition-all duration-300 hover:scale-102">
+        <Link
+          href={"/"}
+          className="relative size-64 transition-all duration-300 hover:scale-102"
+        >
           <Image
             src={brandInfo.logos.logoFull.url}
             alt="Miirachii Logo"
@@ -36,7 +40,7 @@ export default async function Hero({ hook }: HeroProps) {
               objectFit: "contain",
             }}
           />
-        </div>
+        </Link>
         <div className="h-0.5 w-16 bg-primary" />
         <h1 className="select-none text-6xl text-primary">
           {hookParts.map((part) => (
