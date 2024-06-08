@@ -5,7 +5,7 @@ export default function ServicesTextPhotography() {
         <h2 className="p-0 text-6xl leading-[0.7] text-primary transition-all duration-300 hover:text-accent">
           Photo
         </h2>
-        <div className="absolute left-1/2 top-1/2 h-64 w-2 -translate-x-1/2 -translate-y-1/2 rotate-12 bg-accent" />
+        <div className="absolute left-1/2 top-1/2 h-64 w-1.5 -translate-x-1/2 -translate-y-1/2 rotate-12 bg-accent" />
         <h2 className="mt-auto p-0 text-right text-6xl leading-[0.7] text-primary transition-all duration-300 hover:text-accent">
           Video
         </h2>

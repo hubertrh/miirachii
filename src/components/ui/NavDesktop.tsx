@@ -18,16 +18,16 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: "#about", name: "about" },
-    { href: "#services", name: "services" },
-    // { href: "/portfolio", name: "portfolio" },
-    { href: "#contact", name: "contact" },
+    { href: "/#about", name: "about" },
+    { href: "/#services", name: "services" },
+    { href: "/portfolio", name: "portfolio" },
+    { href: "/#contact", name: "contact" },
   ];
 
-  const tooltipLinks = [
+  const tooltipLinks: { name: string }[] = [
     // { name: "about" },
     // { name: "services" },
-    { name: "portfolio" },
+    // { name: "portfolio" },
     // { name: "contact" },
   ];
 
@@ -48,7 +48,7 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
             <span key={link.name} className="flex items-center">
               <Link
                 href={link.href}
-                className={`transition-all duration-300 ease-out hover:text-accent ${isActive ? "text-red-500" : ""} ${hoveredLink && hoveredLink !== link.href ? "blur-sm" : ""} ${variant === "header" ? "text-primary" : "text-white"}`}
+                className={`transition-all duration-300 ease-out hover:text-accent ${isActive ? "font-medium !text-accent" : ""} ${hoveredLink && hoveredLink !== link.href ? "blur-sm" : ""} ${variant === "header" ? "text-primary" : "text-white"}`}
                 onMouseEnter={() => setHoveredLink(link.href)}
                 onMouseLeave={() => setHoveredLink(null)}
               >

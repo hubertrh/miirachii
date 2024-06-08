@@ -1,28 +1,34 @@
 import Image from "next/image";
-import heroBackground from "/public/hero-bg.jpg";
-import { getBrandInfo } from "../../../../sanity/groqGetters/getBrandInfo";
+import Link from "next/link";
+import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 
-export default async function Hero() {
+type HeroProps = {
+  hook: string;
+};
+
+export default async function Hero({ hook }: HeroProps) {
   const brandInfo = await getBrandInfo();
-
-  const hook = "Your Story, Beautifully Told";
   const hookParts = hook.split(" ");
 
   return (
     <section className="relative z-10 grid h-svh w-full place-items-center bg-background">
       <Image
-        className="opacity-40"
-        src={heroBackground}
+        src={brandInfo.heroImage.image.url}
         alt="Hero Background"
         priority
         placeholder="blur"
+        blurDataURL={brandInfo.heroImage.image.metadata.lqip}
         fill
         style={{
           objectFit: "cover",
+          opacity: `0.${brandInfo.heroImage.opacity}`,
         }}
       />
       <div className="z-20 flex flex-col items-center gap-8">
-        <div className="relative size-64 transition-all duration-300 hover:scale-102">
+        <Link
+          href={"/"}
+          className="relative size-64 transition-all duration-300 hover:scale-102"
+        >
           <Image
             src={brandInfo.logos.logoFull.url}
             alt="Miirachii Logo"
@@ -34,7 +40,7 @@ export default async function Hero() {
               objectFit: "contain",
             }}
           />
-        </div>
+        </Link>
         <div className="h-0.5 w-16 bg-primary" />
         <h1 className="select-none text-6xl text-primary">
           {hookParts.map((part) => (

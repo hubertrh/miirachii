@@ -31,6 +31,28 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "heroImage",
+      title: "Hero Image",
+      type: "object",
+      fields: [
+        defineField({
+          name: "image",
+          title: "Hero Image",
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          validation: (rule) => rule.required().assetRequired(),
+        }),
+        defineField({
+          name: "opacity",
+          title: "Hero Image Opacity (%)",
+          type: "number",
+          validation: (rule) => rule.required().min(0).max(100),
+        }),
+      ],
+    }),
+    defineField({
       name: "email",
       title: "Email",
       type: "email",
