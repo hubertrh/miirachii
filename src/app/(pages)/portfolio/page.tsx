@@ -8,7 +8,9 @@ export default async function page() {
   return (
     <>
       <Hero hook={pageContent.hook} />
-      <PortfolioCategories />
+      <PortfolioCategories
+        portfolioCategories={pageContent.portfolioCategories}
+      />
     </>
   );
 }

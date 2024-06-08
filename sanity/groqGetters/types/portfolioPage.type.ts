@@ -5,9 +5,11 @@ export type PortfolioPage = {
   portfolioCategories: {
     name: string;
     description: string;
-    url: ImageAsset["url"];
-    metadata: {
-      lqip: ImageAsset["metadata"]["lqip"];
+    image: {
+      url: ImageAsset["url"];
+      metadata: {
+        lqip: ImageAsset["metadata"]["lqip"];
+      };
     };
   }[];
 };
