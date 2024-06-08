@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 import Link from "next/link";
+import { getBrandInfo } from "../../../sanity/groqGetters/getBrandInfo";
 
 type HeroProps = {
   hook: string;
