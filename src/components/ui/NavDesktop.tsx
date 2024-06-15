@@ -25,6 +25,7 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
   ];
 
   const tooltipLinks: { name: string }[] = [
+    // TODO: Cleanup when ready
     // { name: "about" },
     // { name: "services" },
     // { name: "portfolio" },

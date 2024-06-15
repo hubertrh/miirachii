@@ -51,7 +51,7 @@ export default function PortfolioCategories({
               key={index}
               id={`paragraph-${index + 1}`}
               ref={categoryRefs.current[index]}
-              className={`!leading-7 transition-all duration-500 ${visibleImage === `image-${index + 1}` ? "text-3xl font-medium" : ""}`}
+              className={`!leading-7 text-primary transition-all duration-500 ${visibleImage === `image-${index + 1}` ? "text-3xl font-medium" : ""}`}
             >
               {portfolioCategory.name}
             </p>
