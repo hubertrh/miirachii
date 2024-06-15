@@ -56,7 +56,11 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
                 {link.name}
               </Link>
               {index < navLinks.length - 1 && (
-                <span className="mx-4 text-sm">•</span>
+                <span
+                  className={`mx-4 text-sm ${variant === "header" ? "text-primary" : "text-white"}`}
+                >
+                  •
+                </span>
               )}
             </span>
           );
