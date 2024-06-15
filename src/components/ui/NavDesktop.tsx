@@ -21,7 +21,7 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
     { href: "/#about", name: "about" },
     { href: "/#services", name: "services" },
     { href: "/portfolio", name: "portfolio" },
-    { href: "/#contact", name: "contact" },
+    { href: "#contact", name: "contact" },
   ];
 
   const tooltipLinks: { name: string }[] = [
