@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero/Hero";
+import ServicesCategories from "@/components/services/ServicesCategories";
 
 export default function Services() {
   // const pageContent = await getServicesPage();
@@ -7,9 +8,10 @@ export default function Services() {
     <>
       {/* TODO: Replace with CMS data */}
       <Hero hook="My Services, Artfully Captured" />
-      {/* <PortfolioCategories
-        portfolioCategories={pageContent.portfolioCategories}
-      /> */}
+      {/* <Hero hook={pageContent.servicesCategories} /> */}
+      <ServicesCategories
+      // servicesCategories={pageContent.servicesCategories}
+      />
     </>
   );
 }
