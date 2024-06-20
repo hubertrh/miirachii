@@ -19,12 +19,13 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
 
   const navLinks = [
     { href: "/#about", name: "about" },
-    { href: "/#services", name: "services" },
+    { href: "/services", name: "services" },
     { href: "/portfolio", name: "portfolio" },
-    { href: "/#contact", name: "contact" },
+    { href: "#contact", name: "contact" },
   ];
 
   const tooltipLinks: { name: string }[] = [
+    // TODO: Cleanup when ready
     // { name: "about" },
     // { name: "services" },
     // { name: "portfolio" },
@@ -55,7 +56,11 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
                 {link.name}
               </Link>
               {index < navLinks.length - 1 && (
-                <span className="mx-4 text-sm">•</span>
+                <span
+                  className={`mx-4 text-sm ${variant === "header" ? "text-primary" : "text-white"}`}
+                >
+                  •
+                </span>
               )}
             </span>
           );
