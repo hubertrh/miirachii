@@ -49,7 +49,7 @@ export default function ServicesCategories() {
                         objectFit: "cover",
                       }}
                     />
-                    <div className="absolute inset-0 bg-transparent transition-all duration-300 ease-out group-hover:bg-primary/50" />
+                    <div className="absolute inset-0 bg-transparent transition-all duration-300 ease-out group-hover:bg-primary/60" />
                     <h2 className="absolute right-0 top-full p-0 text-sm transition-all duration-300 ease-out group-hover:translate-y-[-125%] group-hover:text-4xl group-hover:text-white">
                       {pageContent.categories[index + 1].categoryName}
                     </h2>
