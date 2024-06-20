@@ -19,7 +19,7 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
 
   const navLinks = [
     { href: "/#about", name: "about" },
-    { href: "/#services", name: "services" },
+    { href: "/services", name: "services" },
     { href: "/portfolio", name: "portfolio" },
     { href: "#contact", name: "contact" },
   ];
