@@ -2,7 +2,7 @@ import { getPortfolioPage } from "../../../../sanity/groqGetters/getPortfolioCat
 import Hero from "@/components/Hero/Hero";
 import PortfolioCategories from "@/components/portfolio/PortfolioCategories";
 
-export default async function page() {
+export default async function Portfolio() {
   const pageContent = await getPortfolioPage();
 
   return (
