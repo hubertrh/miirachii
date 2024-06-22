@@ -3,12 +3,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import NextTopLoader from "nextjs-toploader";
 import { Lora, Quicksand } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import HeaderLink from "@/components/header/HeaderLink";
 
 export const metadata: Metadata = {
   title: "Miirachii",
@@ -55,7 +52,6 @@ export default function RootLayout({
         easing="ease"
         speed={500}
       /> */}
-      <HeaderLink />
       <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />
