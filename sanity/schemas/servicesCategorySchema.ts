@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "portfolioCategory",
-  title: "Portfolio Categories",
+  name: "servicesCategory",
+  title: "Services Categories",
   type: "document",
   fields: [
     defineField({
@@ -19,23 +19,6 @@ export default defineType({
         hotspot: true,
       },
       validation: (rule) => rule.required().assetRequired(),
-    }),
-    defineField({
-      name: "categoryImages",
-      title: "Category Images",
-      type: "array",
-      of: [
-        {
-          type: "image",
-          options: {
-            hotspot: true,
-          },
-        },
-      ],
-      options: {
-        layout: "grid",
-      },
-      validation: (rule) => rule.required(),
     }),
   ],
   preview: {

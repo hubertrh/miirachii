@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "portfolio",
-  title: "Portfolio Page",
+  name: "services",
+  title: "Services Page",
   type: "document",
   fields: [
     defineField({
@@ -12,16 +12,16 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "portfolioCategories",
-      title: "Portfolio Categories",
+      name: "servicesCategories",
+      title: "Services Categories",
       type: "array",
-      of: [{ type: "reference", to: [{ type: "portfolioCategory" }] }],
+      of: [{ type: "reference", to: [{ type: "servicesCategory" }] }],
       validation: (rule) => rule.required(),
     }),
   ],
   preview: {
     select: {
-      title: "Portfolio Page Content",
+      title: "Services Page Content",
     },
   },
 });

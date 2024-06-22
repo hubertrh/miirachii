@@ -1,5 +1,5 @@
 import { StructureBuilder } from "sanity/structure";
-import { SquareUserRound, Home, BriefcaseBusiness } from "lucide-react";
+import { SquareUserRound, Home, BriefcaseBusiness, Wrench } from "lucide-react";
 
 const singletonDocuments = {
   contactInfo: {
@@ -15,6 +15,13 @@ const singletonDocuments = {
     schemaType: "homepage",
     description: "Homepage Content",
     icon: Home,
+  },
+  servicesPageContent: {
+    title: "Services Page",
+    documentId: "01f44cd6-3d7c-4075-bf8a-1569596d7cd9",
+    schemaType: "services",
+    description: "Services Page Content",
+    icon: Wrench,
   },
   portfolioPageContent: {
     title: "Portfolio Page",
