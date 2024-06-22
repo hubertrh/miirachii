@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Home } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -41,6 +42,25 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
       <nav
         className={`flex h-11 items-center justify-center rounded-full bg-offwhite/40 px-5 text-lg tracking-widest backdrop-blur-md ${variant === "header" ? "bg-offwhite/40" : "bg-offwhite/20"}`}
       >
+        {pathname !== "/" && (
+          <span className="flex items-center">
+            <Link
+              href="/"
+              className={`transition-all duration-300 ease-out hover:text-accent ${hoveredLink && hoveredLink !== "/" ? "blur-sm" : ""} ${variant === "header" ? "text-primary" : "text-white"}`}
+              onMouseEnter={() => setHoveredLink("/")}
+              onMouseLeave={() => setHoveredLink(null)}
+              onClick={() => setHoveredLink(null)}
+            >
+              <Home size={20} />
+            </Link>
+            <span
+              className={`mx-4 text-sm ${variant === "header" ? "text-primary" : "text-white"}`}
+            >
+              •
+            </span>
+          </span>
+        )}
+
         {/* TODO: Replace tooltipLinks with navLinks when ready */}
         {navLinks.map((link, index) => {
           const isActive = pathname === link.href;
@@ -52,6 +72,7 @@ export default function NavDesktop({ variant = "header" }: NavDesktopProps) {
                 className={`transition-all duration-300 ease-out hover:text-accent ${isActive ? "font-medium !text-accent" : ""} ${hoveredLink && hoveredLink !== link.href ? "blur-sm" : ""} ${variant === "header" ? "text-primary" : "text-white"}`}
                 onMouseEnter={() => setHoveredLink(link.href)}
                 onMouseLeave={() => setHoveredLink(null)}
+                onClick={() => setHoveredLink(null)}
               >
                 {link.name}
               </Link>
