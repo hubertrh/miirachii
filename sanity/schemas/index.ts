@@ -3,6 +3,8 @@ import brandInfoSchema from "./brandInfoSchema";
 import homepageSchema from "./homepageSchema";
 import portfolioSchema from "./portfolioSchema";
 import portfolioCategorySchema from "./portfolioCategorySchema";
+import servicesSchema from "./servicesSchema";
+import servicesCategorySchema from "./servicesCategorySchema";
 
 const schemas: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -10,6 +12,8 @@ const schemas: { types: SchemaTypeDefinition[] } = {
     homepageSchema,
     portfolioSchema,
     portfolioCategorySchema,
+    servicesSchema,
+    servicesCategorySchema,
   ],
 };
 
